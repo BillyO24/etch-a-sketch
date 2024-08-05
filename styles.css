@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid black;
+    width: 400px;
+    height: 400px;
+}
+
+.row {
+    display: flex;
+    flex: 1 1 0;
+}
+
+.square {
+    border: 1px solid black;
+    flex: 1 1 0;
+}
