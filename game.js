@@ -1,6 +1,19 @@
 //Create 16x16 default grid
 let body = document.querySelector("body");
 
+function randomColor() {
+    //max hex value for a color
+    let max = 0xFFFFFF; 
+    //toString(16) converts random number back into hex after multiplication and flooring
+    //Optional parameter for toString() is a radix value 2-36 specifying base
+    //of number converted into string representation
+    let randNum = Math.floor(Math.random() * max).toString(16);    
+    //making sure string length is no less than 6 characters
+    color = randNum.padStart(6, 0);
+    //make sure it's all uppercase
+    return `#${color.toUpperCase()}`;
+}
+
 
 function makeGrid(gridSize) {
     let grid = document.createElement("div");
@@ -22,7 +35,7 @@ function makeGrid(gridSize) {
     
     squares.forEach((square) => {
         square.addEventListener("mouseenter", (event) => {
-            event.target.style["background-color"] = "red";
+            event.target.style["background-color"] = randomColor();
         });
     });
 }
