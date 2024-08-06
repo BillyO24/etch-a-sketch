@@ -34,6 +34,14 @@ let changeBtn = document.querySelector("button");
 
 changeBtn.addEventListener("click", function() {
     let gridSize = prompt("Enter size you wish grid to be (E.g. enter 100 for up to 100x100):");
+    if(gridSize > 100) { //limit size of grid
+        alert("Do not enter values greater than 100!");
+        return;
+    }
+    else if (gridSize % 1 != 0) { //do not let user enter non-integer values
+        alert("Do not enter non-integer values!");
+        return;
+    }
     body.removeChild(grid);
 
     makeGrid(gridSize);
