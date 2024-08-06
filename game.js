@@ -36,6 +36,7 @@ function makeGrid(gridSize) {
     squares.forEach((square) => {
         square.addEventListener("mouseenter", (event) => {
             event.target.style["background-color"] = randomColor();
+            event.target.style.opacity += 0.1;
         });
     });
 }
