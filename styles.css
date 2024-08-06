@@ -4,6 +4,15 @@ body {
     flex-direction: column;
 }
 
+button {
+    margin-bottom: 15px;
+}
+
+.buttons {
+    display: flex;
+    gap: 50px;
+}
+
 .grid {
     display: flex;
     flex-direction: column;
@@ -21,3 +30,4 @@ body {
     border: 1px solid black;
     flex: 1 1 0;
 }
+
