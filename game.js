@@ -34,9 +34,11 @@ function makeGrid(gridSize) {
     let squares = document.querySelectorAll(".square");
     
     squares.forEach((square) => {
+        let opac = 0.1;
         square.addEventListener("mouseenter", (event) => {
             event.target.style["background-color"] = randomColor();
-            event.target.style.opacity += 0.1;
+            opac += 0.1;
+            event.target.style.opacity = opac;
         });
     });
 }
